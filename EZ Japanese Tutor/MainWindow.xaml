@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EZ_Japanese_Tutor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="720" Width="700" ResizeMode="CanMinimize" Closed="Window_Closed">
     <Grid>
-        
+        <TabControl x:Name="tbcMainTabs" HorizontalAlignment="Left" Height="691" VerticalAlignment="Top" Width="694" SelectionChanged="TbcMainTabs_SelectionChanged">
+            <TabItem x:Name="tabHome" Header="Home" Width="100" Loaded="TabHome_Loaded">
+                <Grid Background="#FFE5E5E5">
+                    <Canvas x:Name="cnvHome" HorizontalAlignment="Left" Height="663" VerticalAlignment="Top" Width="688"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabStudy" Header="Study" Width="100">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabViewSources" Header="View Sources" Width="100">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabAddSource" Header="Add Source" Width="100">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabDictionary" Header="Dictionary" Width="100">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tabSettings" Header="Settings" Width="100">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
