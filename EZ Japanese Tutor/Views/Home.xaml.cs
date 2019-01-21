@@ -15,18 +15,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace EZ_Japanese_Tutor
+namespace EZ_Japanese_Tutor.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+
+    public partial class Home : UserControl
     {
+
         private Random rand = new Random();
         private DispatcherTimer marqueeTimer = new DispatcherTimer { Interval = new TimeSpan(0, 0, 1) };
         private List<Label> lstLabels = new List<Label>();
         private List<DoubleAnimation> lstAnims = new List<DoubleAnimation>();
-        private const int maxLabels = 20;
+        private const int maxLabels = 15;
 
         List<string> testStrings = new List<string>()
         {
@@ -41,34 +40,17 @@ namespace EZ_Japanese_Tutor
             "エバリュエーション",
             "評価",
             "テ。ス。ト。",
-            "I THINK YOU GET IT, IT'S A TEST"
+            "TEST STRING 12",
+            "TEST STRING 13",
+            "TEST STRING 14",
+            "TEST STRING 15"
         };
 
-        public MainWindow()
+        public Home()
         {
             InitializeComponent();
             marqueeTimer.Tick += Marquee_Tick;
-
-        }
-
-        private void TabHome_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-
-        }
-
-        private void TbcMainTabs_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (tabHome.IsSelected)
-            {
-                Start_Marquee();
-
-            }
-            else
-            {
-                Stop_Marquee();
-
-            }
+            Start_Marquee();
 
         }
 
@@ -93,10 +75,10 @@ namespace EZ_Japanese_Tutor
                 {
                     From = cnvHome.ActualWidth,
                     To = -newLabel.ActualWidth,
-                    Duration = new Duration(TimeSpan.Parse("0:0:"+rand.Next(10,30).ToString()))
+                    Duration = new Duration(TimeSpan.Parse("0:0:" + rand.Next(10, 30).ToString()))
 
                 };
-                
+
                 marqueeAnimation.Completed += (se, ev) =>
                 {
                     cnvHome.Children.Remove(newLabel);
@@ -110,21 +92,22 @@ namespace EZ_Japanese_Tutor
 
         }
 
-        private void Start_Marquee()
+        public void Start_Marquee()
         {
             marqueeTimer.Start();
 
         }
 
-        private void Stop_Marquee()
+        public void Stop_Marquee()
         {
             marqueeTimer.Stop();
 
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
             marqueeTimer.Stop();
+
         }
 
     }

@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("EZ Japanese Tutor")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("EZ Software Industries")]
 [assembly: AssemblyProduct("EZ Japanese Tutor")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2018")]
+[assembly: AssemblyCopyright("Copyright © EZ Software Industries 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

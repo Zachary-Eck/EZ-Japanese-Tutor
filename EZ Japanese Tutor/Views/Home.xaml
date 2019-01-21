@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="EZ_Japanese_Tutor.Views.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EZ_Japanese_Tutor.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="663" d:DesignWidth="608" Unloaded="UserControl_Unloaded">
+    <Grid Background="#FFE5E5E5">
+        <Canvas x:Name="cnvHome" HorizontalAlignment="Left" Height="663" VerticalAlignment="Top" Width="608"/>
+    </Grid>
+</UserControl>

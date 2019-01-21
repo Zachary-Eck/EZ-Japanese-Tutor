@@ -3,18 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EZ_Japanese_Tutor"
+        xmlns:Views="clr-namespace:EZ_Japanese_Tutor.Views"
+        xmlns:ViewModels="clr-namespace:EZ_Japanese_Tutor.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="700" ResizeMode="CanMinimize" Closed="Window_Closed">
+        Title="MainWindow" Height="720" Width="620" ResizeMode="CanMinimize">
     <Grid>
-        <TabControl x:Name="tbcMainTabs" HorizontalAlignment="Left" Height="691" VerticalAlignment="Top" Width="694" SelectionChanged="TbcMainTabs_SelectionChanged">
-            <TabItem x:Name="tabHome" Header="Home" Width="100" Loaded="TabHome_Loaded">
-                <Grid Background="#FFE5E5E5">
-                    <Canvas x:Name="cnvHome" HorizontalAlignment="Left" Height="663" VerticalAlignment="Top" Width="688"/>
-                </Grid>
+        <TabControl x:Name="tbcMainTabs" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TabItem x:Name="tabHome" Header="Home" Width="100">
+                <Views:Home/>
             </TabItem>
             <TabItem x:Name="tabStudy" Header="Study" Width="100">
-                <Grid Background="#FFE5E5E5"/>
+                <Views:Study/>
             </TabItem>
             <TabItem x:Name="tabViewSources" Header="View Sources" Width="100">
                 <Grid Background="#FFE5E5E5"/>
